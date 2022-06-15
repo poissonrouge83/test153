@@ -1,0 +1,145 @@
+
+extends ../layout
+
+block link
+    link(rel='stylesheet', href='/stylesheets/profile.css')
+
+block content
+    include ../partials/navigation
+    
+    main
+        div(class="box")
+            ul(id="first-list")
+                li()
+                    span()
+                    h6(class="title") Nom d'utilisateur
+                    p(class="info") #{user.username}
+                    //- div(class="name") hippi porte clef
+                    button(id="button1" type="button") 
+                        a(id="a" href="profile_update") Modifier
+                    div(class="time")
+                        span()
+                             svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16")
+                                path(d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z")
+                                path(fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z")
+
+                li()
+                    span()
+                    div(class="title") Mot de passe
+                    div(class="info") #{user.password}
+                    div(class="name") hippi porte clef
+                    div(class="time")
+                        span()
+                             svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16")
+                                path(d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z")
+
+                
+                li()
+                    span()
+                    div(class="title") E-mail
+                    div(class="info") #{user.mail}
+                    div(class="name") hippi porte clef
+                    div(class="time")
+                        span()
+                             svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16")
+                                path(d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z")
+
+                li()
+                    span()
+                    div(class="title") Coordonnée
+                    div(class="info") #{user.number}
+                    div(class="name") hippi porte clef
+                    div(class="time")
+                        span()
+                             svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-phone-fill" viewBox="0 0 16 16")
+                                path(d="M3 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V2zm6 11a1 1 0 1 0-2 0 1 1 0 0 0 2 0z")
+
+                li()
+                    span()
+                    div(class="title") Adresse
+                    div(class="info") #{user.adress}
+                    div(class="name") hippi porte clef
+                    div(class="time")
+                        span()
+                             svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16")
+                                path(d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z")
+
+                li()
+                    span()
+                    div(class="title") Complement d'adresse
+                    div(class="info") #{user.adressSup}
+                    div(class="name") hippi porte clef
+                    div(class="time")
+                        span()
+                            svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16")
+                                path(d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z")
+                           
+                li()
+                    span()
+                    div(class="title") Code postal
+                    div(class="info") #{user.codePostal}
+                    div(class="name") hippi porte clef
+                    div(class="time")
+                        span()
+                            svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16")
+                                path(d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z")
+                            
+                li()
+                    span()
+                    div(class="title") Ville
+                    div(class="info") #{user.city}
+                    div(class="name") hippi porte clef
+                    div(class="time")
+                        span()
+                            svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16")
+                                path(d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z")
+                            
+            div(class="cont-button")
+                button(id="btn-custom" type="submit") Modifier
+                    //- a(id="a" href="profile_update") 
+
+    include ../partials/footer            
+                
+block script 
+    script(src="/javascripts/profile.js")
+
+
+//-     section
+//-         h6 Nom d'utilisateur 
+//-         p #{user.username}
+
+//-     section
+//-         h6 Mot de Passe
+//-         p #{user.password}
+
+//-     section
+//-         h6 E-mail
+//-         p #{user.mail}
+
+//-     section
+//-         h6 Numéro de contact
+//-         p #{user.number}
+
+//-     section
+//-         h6 Adresse
+//-         p #{user.adress}
+
+//-     section
+//-         h6 Complement d'adresse
+//-         p #{user.adressSup}
+
+//-     section
+//-         h6 Code postal
+//-         p #{user.codePostal}
+
+//-     section
+//-         h6 Ville
+//-         p #{user.city}
+
+
+//-     div 
+//-         button(type="button") 
+//-             a(href="profile_update") Modifier
+
+
+

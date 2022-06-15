@@ -1,0 +1,31 @@
+extends ../layout
+
+block link
+    link(rel='stylesheet', href='/stylesheets/box.css')
+    link(rel='stylesheet', href='/stylesheets/login.css')
+   
+block content
+    include ../partials/navigation
+
+    main 
+        div(id="fuckingTitle")
+            h1= "CONNEXION" 
+
+        section(class="box-custom")
+            div(class="container-custom")
+
+                div(class="form-div")
+                    form(class="row g-3 form-custom" method="POST")
+            
+                        div(class="col-md-8 form-element-custom")
+                            label(for="inputUsername" class="form-label") Nom d'utilisateur
+                            input(type="text" class="form-control" id="inputUsername")
+            
+                        div(class="col-md-8 form-element-custom")
+                            label(for="inputPassword" class="form-label") Mot de passe
+                            input(type="password" class="form-control" id="inputPassword")
+                
+                        div(class="col-8 form-element-custom")
+                            button(type="submit" id="btn-custom" class="btn") Connexion
+            
+    include ../partials/footer

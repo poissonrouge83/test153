@@ -1,0 +1,368 @@
+#h2{
+    color: red;
+}
+
+.container-all-pub{
+    display: grid;
+    grid-template-columns: 1fr 240px 1fr;
+    
+}
+
+.pub-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+
+    margin-left: auto;
+    margin-right: auto;
+    height: 240px;
+}
+
+.pub-box-left{
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    margin-left: 20px;
+    border-radius: 20px 0 0 20px;
+
+    background: linear-gradient(to top left, rgb(255, 205, 205) 0%, var(--gradient-red-2) 50%, var(--gradient-red-2) 50%, var(--gradient-red-1) 100%);
+}
+
+.pub-box-right{
+    grid-column-start: 3;
+    grid-column-end: 4;
+
+    margin-right: 20px;
+    border-radius: 0 20px 20px 0;
+    
+    background: linear-gradient(to bottom right, rgb(255, 205, 205) 0%, var(--gradient-red-2) 50%, var(--gradient-red-2) 50%, var(--gradient-red-1) 100%);
+}
+
+.triangle{
+    height: 240px;
+    width: 240px;
+}
+
+.triangle-left{
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    background: linear-gradient(to top left, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgb(255, 205, 205) 50%, var(--gradient-red-2) 100%);
+}
+
+.triangle-right{
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    background: linear-gradient(to bottom right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, rgb(255, 205, 205) 50%, var(--gradient-red-2) 100%);
+}
+
+.img-div{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.img-div-left{
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.img-div-right{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.img-pub{
+    max-width: 20vw;
+    max-height: 150px;
+    margin: 5px;
+}
+
+.img-left{
+    border-radius: 20px 10px 10px 10px;
+}
+
+.img-right{
+    border-radius: 10px 20px 10px 10px;
+}
+
+.img-div-left{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.img-div-right{
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+h3{
+    text-align: center;
+}
+
+.pub-lorem{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+
+    margin: 10px;
+}
+
+@media screen and (min-width:1001px) {
+    .min-screen{
+        display: none;
+    }
+
+    .full-screen{
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .container-all-pub{
+        grid-template-columns: 1fr 180px 1fr;
+    }
+
+    .full-screen{
+        display: none;
+    }
+
+    .min-left{
+        margin-top: 10%;
+        margin-right: 40px;
+    }
+
+    .min-right{
+        margin-top: 110%;
+        margin-left: 40px;
+    }
+
+    .img-div{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .pub-box{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+
+        height: 280px;
+    }
+
+    .triangle{
+        height: 280px;
+        width: 180px;
+    }
+
+    .img-pub{
+        max-width: 28vw;
+        max-height: 200px;
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .container-all-pub{
+        grid-template-columns: 180px 1fr 180px;
+    }
+
+    .pub-box{
+        margin-bottom: 30px;
+    }
+
+    .triangle{
+        margin-bottom: 30px;
+    }
+
+    .pub-box-left{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .pub-box-right{
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .triangle-left{
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+
+    .triangle-right{
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+
+    .img-pub{
+        max-width: 50vw;
+        max-height: 140px;
+        margin: 5px;
+    }
+}
+
+
+
+
+/* @import url('https://fonts.googleapis.com/css2?family=Libre+Bodoni:ital@1&display=swap');
+
+body{
+    background-color: rgb(238, 244, 249);
+}
+
+
+/**********************partie text et citation***************/
+
+/* .titre-a-propos {
+    text-align: center;
+    padding: 50px 0;
+    padding-bottom: 0;
+    font-size: 50px;
+}
+
+.a-propos{
+    background-color: rgba(102, 75, 224, 0.363);
+}
+
+.citation{
+    font-family: 'Libre Bodoni', serif;
+    color: #f1f1f1;
+    font-weight: bold;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-size: 30px;
+    text-align: justify;
+    text-align: center;
+}
+
+.text{
+    color: #f1f1f1;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 80px;
+    text-align: justify;
+    text-align: center;
+}
+
+.section-parallax {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../images/fond3.jpg) no-repeat right / cover fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/*************************partie ils nous font confiance*/
+
+/* .entreprises {
+    width: 100%;
+}
+
+.titre {
+    text-align: center;
+    padding: 80px 0;
+    font-size: 50px;
+}
+
+.titre_confiance{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px);
+}
+
+.entrepise0, .entreprise1, .entreprise2, .entreprise3, .entreprise4, .entreprise5, .entreprise6{
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px);
+}
+
+
+.container_all_entreprises {
+
+    width: 100%;
+    height: auto;
+    margin: 0 auto 100px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.container_entreprise  {
+    margin: 20px;
+    width: 420px;
+    height: 450px;
+    background-color: rgb(238, 244, 249);  
+    text-align: justify;
+    color: rgba(33, 33, 33, 0.644);
+    
+    transition: transform 0.3s ease-out;
+    box-shadow: 0 0 10px rgba(62, 62, 62, 0.21);
+   
+}
+
+.container_entreprise:hover {
+    transform: translateY(-5px);
+}
+
+.img_entreprise {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+}
+
+.img_entreprise img {
+    filter: grayscale(100%);
+    width: 100%;
+    height: auto;
+}
+
+.container_entreprise h3 {
+    padding: 10px 10px 0;
+    font-size: 22px;
+}
+
+.container_entreprise p {
+    padding: 10px 10px 0;
+}
+
+.btn_entreprises {
+    display: block;
+    margin: 10px;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: aliceblue;
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background-color: #457b9def;
+
+}
+
+.btn_entreprises::after {
+    content: '';
+    height: 240px;
+    width: 100px;
+    background: rgba(255,255,255,0.4);
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: -50px;
+    transform: rotate(-45deg)
+}
+
+.btn_entreprises:hover::after {
+    transition: transform 0.3s 0.1s linear;
+    transform: translateX(400px);
+} */ 

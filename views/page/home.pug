@@ -1,0 +1,28 @@
+extends ../layout
+
+block link
+    link(rel='stylesheet', href='/stylesheets/home.css')
+    link(rel='stylesheet', href='/stylesheets/pictures.css')
+    link(rel='stylesheet', href='/stylesheets/pict_block/4picture.css')
+
+block content
+    include ../partials/navigation
+
+    main(id="fuckingMain")
+        section
+            div(class="image_bg_home")
+
+            div(class="block_welcome")
+                h1(id="h1")= "Bienvenue chez AJT Services"
+
+                p(class="txt-animation")
+
+        include ../partials/pictures.pug
+
+
+    include ../partials/footer    
+
+block script 
+    script(src="/javascripts/text-anim.js")
+    script(src="/javascripts/pictures.js")
+    

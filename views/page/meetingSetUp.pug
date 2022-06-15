@@ -1,0 +1,16 @@
+extends  ../layout
+
+block link
+    link(rel='stylesheet', href='/stylesheets/devis.css')
+    link(rel='stylesheet', href='/stylesheets/box.css')
+    
+block content
+    include ../partials/navigation
+    
+    main
+        include ../partials/rdv
+
+        unless(empty)
+            include ../partials/calendar
+
+    include ../partials/footer

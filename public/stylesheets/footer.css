@@ -1,0 +1,37 @@
+footer{
+    height: 2.5rem;
+    background-color: rgb(66, 66, 66);
+    margin: 0;
+
+    position: relative;
+    width: 100%;
+    bottom: 0;
+
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.logo-footer{
+    height: 2rem;
+    margin: 0;
+}
+
+.fuckingBootstrap{
+    margin: 0;
+}
+
+@media screen and (max-width: 800px) {
+    footer{
+        height: 3.5rem;
+        grid-template-columns: 50px 1fr 1fr;
+        grid-template-rows: 50px 1fr;
+    }
+
+    .div-logo{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+}

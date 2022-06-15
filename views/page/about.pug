@@ -1,0 +1,62 @@
+extends ../layout
+
+block link
+    link(rel='stylesheet', href='/stylesheets/about.css')
+    //link(rel='stylesheet', href='/stylesheets/text&pictures.css')
+
+block content
+    include ../partials/navigation
+
+    main 
+        div(class="container-all" id="container-all")
+
+            h2(id="h2") AJT services, votre agence de nettoyage 100% orientée vers les professionnels!
+    
+            
+            div(class="cont-txt-img" id="cont-txt-img")
+
+                div(class='cont-txt')
+                    
+                    h3(class="h3_title") Nous nous chargeons pour vous, efficacement du nettoyage et de la desinfection de vos établissements.
+                    
+                    div(class="cont-text-span") 
+                        span(id="big-span") Notre mission? 
+                        p(id="p") Faire briller les moindre recoins de vos entreprises! nous intervenons principalement, dans des locations de  vacances, les parties commune de residences, les bureaux, restaurants snacks, et autres commerces. 
+                    
+                    span(class="litle-span")  Spécialisée dans le nettoyage de locaux professionnels, AJT Services est aujourd’hui connue pour sa fiabilité et son amour du travail bien réalisé.
+                
+                div(class="cont-img")
+                    div(class="contenant")
+                        img(class="img" src="images/img_home22.jpg" alt="image de presentation")
+                        div(class="txt-center") 
+                            | "N'hesitez plus! 
+                            a(href="meeting" class="aContact") Contactez nous,
+                            |  afin que nous puissions fixer un rdv pour un devis gratuit."
+
+    //- main
+    //-     div(class="text-pictures")
+
+    //-     section(class="a-propos")
+
+    //-         div(id="fuckingTitle")
+    //-             h2(class="titre-a-propos") A Propos De Nous
+
+
+    //-         if aboutText 
+    //-             div(class="cont-a-propos-img")
+    //-                 p(class="text") #{aboutText}
+    //-                 //- if contain.aboutImgSrc 
+    //-                 //-     if contain.aboutImgAlt
+    //-                 //-         img(src="#{contain.aboutImgSrc}" alt="#{contain.aboutImgAlt}")
+    //-                 img(src="images/grand_sud.jpg" class="img-a-propos")
+
+    //-     if quote
+    //-         div(class="section-parallax citation") 
+    //-             p #{quote} 
+
+
+        include ../partials/opinion
+
+    include ../partials/footer  
+
+block script   

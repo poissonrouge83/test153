@@ -1,0 +1,54 @@
+
+
+section(class="container-all" id="container-all")
+        
+    div(class="cont-form-img" id="cont-form-img")
+    
+        form(id="form" method='POST')
+            h2 Nous Contacter
+            div(class="form_container")
+                div(class="input_container")
+
+                    div(class="input_bloc")
+                        div(class="input_box")
+                            input(type="text" placeholder="Nom d'utilisateur" required)
+                                
+        
+                    div(class='input_bloc')
+                        
+                        div(class="input_box")
+                            input(type="text" placeholder="Ville" required)
+
+                    div(class='input_bloc')
+                        div(class="input_box")
+                            input(type="email" placeholder="Email" required)
+                        div(class="input_box")
+                            input(type="text" placeholder="Telephone" required)
+                    
+                    div(class='input_bloc')
+                        div(class='input_box')
+                            select(name="premises") 
+                                option(value="") --Type de locaux-- 
+                                option(value="") Maison secondaires 
+                                option(value="") Entrprise
+                                option(value="") ...
+                                option(value="") autres
+                        
+                        div(class='input_box')
+                            if(warning)
+                                div(class="warning")
+                                    p Attention, les maisons principales ( ...? )
+
+                    div(class='input_bloc')
+                        div(class='input_box')  
+                            button(id="btn-custom" type='submit' value='submit') Envoyer
+
+        div(class="cont-img-p")
+            img(class="img-devis" src="images/devis3.jpg" alt="devis rdv")
+
+
+
+
+
+        
+

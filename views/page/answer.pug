@@ -1,0 +1,11 @@
+extends ../layout
+
+
+include ../partials/navigation
+
+if allWorks
+    include ../partials/standardAnswer.pug
+else
+    include ../partials/errorAnswer.pug
+
+include ../partials/footer

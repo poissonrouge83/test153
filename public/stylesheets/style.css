@@ -1,0 +1,85 @@
+
+html{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+main{
+    min-height: calc(100vh - 40px);
+}
+  
+#fuckingTitle{
+    padding-top: 120px;
+}
+
+#btn-custom{
+    background-color: white;
+    color: var(--nav-purple);
+    border: var(--nav-purple) 2px solid;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.479);
+}
+
+#btn-custom:hover{
+    background-color: rgb(228, 226, 255);
+}
+
+#btn-custom:active{
+    translate: 2px 2px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+.btn-custom{
+    background-color: white;
+    color: var(--nav-purple);
+    border: var(--nav-purple) 2px solid;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.479);
+}
+
+.btn-custom:hover{
+    background-color: rgb(228, 226, 255);
+}
+
+.btn-custom:active{
+    translate: 2px 2px;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+
+.container-custom{
+    width: 1100px;
+    height: 600px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    background: var(--bg-red);
+}
+
+.box-custom{
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 100px 0;
+}
+
+
+@media (max-width: 767px) {
+    .container-custom{
+        height: fit-content;
+        width: 100%;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        border-radius: 5px;
+    }
+
+}

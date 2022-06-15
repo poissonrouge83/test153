@@ -1,0 +1,10 @@
+:root{
+    --bg-blue: linear-gradient(to right, rgb(77, 72, 231), rgb(93, 176, 218));
+    --bg-red:  linear-gradient(to right, rgb(224, 85, 85), rgb(227, 106, 25));
+    --bg-blue-opac: linear-gradient(to right, rgba(77, 72, 231, 0.85), rgba(93, 176, 218, 0.85));
+    --gradient-red-1: rgb(224, 85, 85);
+    --gradient-red-2: rgb(227, 106, 25);
+    --title: 100px;
+    --nav-purple: #674be0;
+    --nav-red: #e05555;
+}

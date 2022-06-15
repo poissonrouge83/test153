@@ -1,0 +1,87 @@
+extends ../layout
+
+block link
+    link(rel='stylesheet', href='/stylesheets/signup.css')
+
+block content
+    include ../partials/navigation
+
+
+    main
+        div(id="fuckingTitle")
+            h1= "INSCRIPTION" 
+
+        section(class="form-box")
+
+            form(class="row g-3" method="POST")
+        
+                div(class="col-md-5")
+                    label(for="inputUsername" class="form-label") Nom d'utilisateur
+                    input(type="text" class="form-control" id="inputUsername" name="username")
+
+                div(class="col-md-5")
+
+                div(class="col-md-5")
+                    label(for="inputEmail" class="form-label") Email
+                    input(type="email" class="form-control" id="inputEmail" name="mail")
+        
+                div(class="col-md-5")
+                    label(for="inputNumber" class="form-label") Numéro
+                    input(type="tel" class="form-control" id="inputNumber" name="number" pattern="([0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2})|([0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2})")
+            
+                div(class="col-md-5")
+                    label(for="inputPassword" class="form-label") Mot de passe
+                    input(type="password" class="form-control" id="inputPassword" name="password")
+        
+                div(class="col-md-5")
+                    label(for="inputCPassword" class="form-label") Confirmation du Mot de passe
+                    input(type="password" class="form-control" id="inputCPassword" name="cpassword")
+
+                div(class="col-md-5")
+                    label(for="inputAdress" class="form-label") Adresse
+                    input(type="text" class="form-control" id="inputAdress" name="adress")
+        
+                div(class="col-md-5")
+                    label(for="inputadressSup" class="form-label") Complement d'adresse
+                    input(type="text" class="form-control" id="inputAdressSup" name="adressSup")
+        
+                div(class="col-md-5")
+                    label(for="inputPostalCode" class="form-label") Code postal
+                    select(id="inputPostalCode" class="form-select" name="postalCode")
+                        option(value="83000") 83 000 
+                        option(value="83100") 83 100 
+                        option(value="83110") 83 110 
+                        option(value="83130") 83 130 
+                        option(value="83140") 83 140
+                        option(value="83150") 83 150 
+                        option(value="83160") 83 160 
+                        option(value="83190") 83 190 
+                        option(value="83200") 83 200
+                        option(value="83210") 83 210 
+                        option(value="83220") 83 220
+                        option(value="83230") 83 230 
+                        option(value="83250") 83 250
+                        option(value="83260") 83 260 
+                        option(value="83270") 83 270
+                        option(value="83320") 83 320
+                        option(value="83330") 83 330
+                        option(value="83390") 83 390
+                        option(value="83400") 83 400 
+                        option(value="83430") 83 430 
+                        option(value="83500") 83 500
+                        option(value="83610") 83 610
+                        option(value="83740") 83 740
+                        option(value="83870") 83 870 
+                        option(value="83980") 83 980 
+        
+                div(class="col-md-5")
+                    label(for="inputCity" class="form-label") Ville
+                    input(type="text" class="form-control" id="inputCity" name="city")
+            
+                div(class="col-12")
+                    button(type="submit" value="Submit" id="btn-custom" class="btn btn-primary") Inscription
+
+        
+        p #{textError}
+
+    include ../partials/footer

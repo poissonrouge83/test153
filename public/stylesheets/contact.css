@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+#customA:hover{
+    text-decoration: none;
+    color: white;
+} 
+
+li{
+    list-style: none;
+}
+
+.container-custom{
+    padding-right: 50px;
+    padding-left: 10px;
+}
+
+.contact_box{
+    transform: translateX(-50%);
+    width: 300px;
+    height: 500px;
+    box-shadow: inset rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px;
+    background: rgba(44, 44, 44, 0.842);
+    z-index: 3;
+    /* align-items: center;
+    text-align: center; */
+    padding: 50px;
+}
+
+.content_box{
+    padding: 0px;
+    align-items: center;
+}
+
+.h3_contact_box{
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+#ul_content_box{
+    padding: 0px;
+    padding-top: 27px;
+}
+
+#ul_content_box li{
+    font-size: 16px;
+    color: white;
+    margin-top: 40px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#ul_content_box li svg{
+     cursor: pointer;
+     width: 70px;
+     height: 70px;
+    padding: 0px;
+    color: #f1f1f1; 
+    animation: shine 2s infinite alternate;
+} 
+
+.block_text{
+    color: #f1f1f1;
+    padding: 10%, 10% ;
+    
+}
+
+.block_text h3 {
+    font-weight: bolder;
+    font-size: 2.4rem;
+    
+}
+
+.block_text p {
+    font-weight: 200;
+    font-size: 1.6rem;
+}
+
+span {
+    font-weight: 1000;
+    font-size: 1.6rem;
+}
+
+
+.btn_devis {
+    display: block;
+    margin: 10px;
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    border: 1px solid #333;
+    border-radius: 3px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, rgb(149, 135, 211), rgb(212, 215, 255));
+    box-shadow: rgba(0, 0, 0, 0.185) 8px 8px;
+}
+
+.btn_devis:active{
+    transform: translate(8px, 8px);
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px;
+}
+
+.btn_devis::after {
+    content: '';
+    height: 240px;
+    width: 100px;
+    background: rgba(255,255,255,0.4);
+    display: block;
+    position: absolute;
+    left: -150px;
+    top: -50px;
+    transform: rotate(-45deg)
+}
+.btn_devis:hover::after {
+    transition: transform 0.3s 0.1s linear;
+    transform: translateX(400px);
+    color: rgb(255, 255, 255);
+    
+}
+
+
+/*********************************************************************************************************/
+                 /**************************************************************************/ 
+                                /********************************************/
+
+@media (max-width: 1460px) {
+    .contact_box{
+        background-color: rgba(255, 255, 255, 0.459);
+        transform: translateX(0);
+        width: 300px;
+        height: 100%;
+        margin-right: 60px;
+    }
+    
+    #ul_content_box{
+        text-align: left;
+        padding-top: 50px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .contact_box{
+        background-color: rgba(255, 255, 255, 0.459);
+        width: 100%;
+        margin-right: 0px;
+        box-shadow: inset rgba(255, 255, 255, 0.25) 0px 50px 100px -20px, rgba(255, 255, 255, 0.3) 0px 30px 60px -30px;
+        background: white;
+        /* border-radius: 5px; */
+        z-index: 3;
+        padding: 50px;
+        margin-bottom: 10px;
+    }
+
+    #ul_content_box{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .block_text{
+        margin-bottom: 40px;
+        padding: 40px;
+    }
+
+    .container-custom{
+        padding: 0;
+    }
+ 
+}
+
+@media (max-width: 720px){
+    .contact_box{
+        background-color: rgba(255, 255, 255, 0.459);
+    }
+}
+
+
+
+/*******************************************************************/
+
+
+@keyframes shine {
+    0%{
+        color: #ffffff6f;
+    }
+    10%{
+        color: #ffffff96;
+    }
+    20%{
+        color: #ffffffb0;
+    }
+    30%{
+        color: #ffffffcf;
+    }
+    40%{
+        color: #ffffffee;
+    }
+    50%{
+        color: #ffffff;
+    }
+    60%{
+        color: #ffffffee;
+    }
+    70%{
+        color: #ffffffcf;
+    }
+    80%{
+        color: #ffffffb0;
+    }
+    90%{
+        color: #ffffff96;
+    }
+    100%{
+        color: #ffffff6f;
+    }
+   
+}

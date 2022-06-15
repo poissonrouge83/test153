@@ -1,0 +1,196 @@
+extends ../layout
+
+
+
+block link
+    link(rel='stylesheet', href='/stylesheets/admin.css')
+
+
+block content
+    include ../partials/navigation
+
+
+    main
+        h1(id='h1') Administration
+        section(class='admin')
+            div(class='cont-admins')
+            
+                section(class='cont-admin presentation1') 
+                    h3  Présentation
+                    p #{contain.aboutText}
+
+                    form(method="POST") 
+                        div(class='cont-input') 
+                            label(for="aboutTextInput")
+                            input(type="text" placeholder='Nouveau texte')
+                        div 
+                            button(id="btn" type="submit" value="Submit") Modifier
+
+                section(class='cont-admin presentation2') 
+                    h3  Présentation
+                    div 
+                        img(src='#{contain.aboutImg.imgSrc}' /*alt='#{contain.aboutImg.imgAlt}'*/)
+
+                    form(method="POST") 
+
+                        div(class='cont-input')
+                            label(for="aboutImgInput")
+                            input(type="file" placeholder='Nouvelle image')
+                        
+                        div 
+                            button(id='btn' type="submit" value="Submit") Modifier
+
+
+                section(class='cont-admin citation') 
+                    h3 Citation 
+                    p #{contain.quote}
+
+                    form(method="POST") 
+
+                        div(class='cont-input')
+                            label(for="quoteInput")
+                            input(type="text" placeholder='Nouveau texte')
+                        
+                        div 
+                            button( id="btn" type="submit" value="Submit") Modifier
+
+                section(class='cont-admin contact') 
+                    h3 Conact
+                    p #{contain.contact.number}
+                    p #{contain.contact.mail}
+
+                    form(method="POST") 
+
+                        div(class='cont-input')
+                            label(for="numberInput")
+                            input(type="text" placeholder='Nouveau numéro') 
+                        
+                        div 
+                            button(id="btn" type="submit" value="Submit") Modifier
+
+                    form(method="POST") 
+
+                        div(class='cont-input')
+                            label(for="mailInput")
+                            input(type="text" placeholder='Nouvel e-mail')
+                        
+                        div 
+                            button(id="btn" type="submit" value="Submit") Modifier
+
+                section(class='cont-admin temps-rep') 
+                    h3  Temps de réponse
+                    p #{contain.reponseTime} heures
+
+                    form(method="POST") 
+
+                        div(class='cont-input')
+                            label(for="aboutTextInput")
+                            input(type="number" placeholder='Nouveau temps en heures')
+                        
+                        div 
+                            button(id="btn" type="submit" value="Submit") Modifier
+
+                section(class='cont-admin pub') 
+                    h3 Bloc Pub
+
+                    form(method="POST") 
+
+                        div(class='cont-input')
+                            p afficher ?
+                            input(type="radio")
+                            label(for="affPub") Oui
+                            input(type="radio")
+                            label(for="affPub") Non
+                        
+                        div 
+                            button(id="btn" ype="submit" value="Submit") Modifier
+
+                section(class='cont-admin avis') 
+                    h3 Bloc avis client
+
+                    form(method="POST") 
+
+                        div(class='cont-input')
+                            p afficher ?
+                            input(type="radio")
+                            label(for="affAvis") Oui
+                            input(type="radio")
+                            label(for="affAvis") Non
+                            
+                        
+                        div 
+                            button(id="btn" type="submit" value="Submit") Modifier
+
+
+                section(class='cont-admin jsp') 
+                    if pictureBlocks
+                        
+                        each pictureBlock in pictureBlocks
+                            div 
+                                div
+                                    img(src='#{contain.pictureBlock.img.imgSrc}' alt= '#{contain.pictureBlock.img.imgAlt}')
+
+                                    form(method="POST") 
+
+                                        div 
+                                            label(for=" #{contain.pictureBlock.img}_imgInput") Image
+                                            input(type="file")
+                        
+                                        div 
+                                            button(id="btn" type="submit" value="Submit") Modifier
+
+                            div
+                                p #{contain.pictureBlock.title}  
+
+                                form(method="POST") 
+
+                                    div 
+                                        label(for=" #{contain.pictureBlock.title}_titleInput") Titre
+                                        input(type="text")
+                        
+                                    div 
+                                        button(id="btn" type="submit" value="Submit") Modifier  
+
+                            div   
+                                p #{contain.pictureBlock.text}   
+
+                                form(method="POST") 
+
+                                    div 
+                                        label(for=" #{contain.pictureBlock.text}_textInput") Texte
+                                        input(type="text")
+                        
+                                    div 
+                                        button(id="btn" type="submit" value="Submit") Modifier
+                        
+                            div 
+                                p Supprimer le bloc 
+
+                                // ??????
+
+                    div 
+                        p Ajouter un bloc 
+
+                        div 
+                            form(method="POST") 
+
+                                div(class='cont-input')
+                                    label(for=" new_imgInput") Image
+                                    input(type="file")
+
+                                div(class='cont-input')
+                                    label(for=" new_titleInput")
+                                    input(type="text" placeholder="Titre")
+
+                                div(class='cont-input')
+                                    label(for=" #{pictureBlock.text}_textInput")
+                                    input(type="text" placeholder="Texte")
+                        
+                                div 
+                                    button(id="btn" type="submit" value="Submit") Ajouter
+
+
+    include ../partials/footer
+    
+block script 
+

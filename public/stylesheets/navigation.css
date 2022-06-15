@@ -1,0 +1,170 @@
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 100%;
+    border: none;
+    background-color: #ffffff;
+}
+
+#fuckingBootstrap{
+    padding-top: 0;
+}
+
+#navbar-custom{
+    height: 50px;
+}
+
+.logo{
+    height: 40px;
+    padding: 0;
+    visibility: hidden;
+    opacity:0;
+    transform: translateY(-50px);
+}
+
+
+.nav-link {
+    margin-left: 50px;
+    color: var(--nav-purple);
+    font-size: large;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-50px);
+}
+
+.nav-link:hover {
+    color: var(--nav-red);
+}
+
+.num {
+    color: var(--nav-red);
+}
+
+.num:hover {
+    color: var(--nav-purple);
+}
+
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.767);
+    border: none;
+    text-align: center;
+    margin-right: 2%;
+}
+
+.dropdown-item {
+    color: var(--nav-purple) ;
+}
+
+/*****************************MENU BURGER*************************************/
+/*Icone Hamburger*/
+
+#hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+}
+
+.hamburger :first-child {
+    margin-top: 0;
+}
+
+.bar1, .bar2, .bar3 {
+    margin-top: 4px;
+    width: 30px;
+    height: 4px;
+    border-radius: 4px;
+    background-color: var(--nav-purple);
+    transition: all 0.2s;
+}
+
+
+.open .bar1 {
+    transform: translateY(200%) rotate(-45deg);
+}
+
+.open .bar2 {
+    opacity: 0;
+    transform: rotate(45deg);
+}
+
+.open .bar3 {
+    transform: translateY(-200%) rotate(45deg);
+}
+
+.noScroll {
+    overflow: hidden;
+}
+
+
+
+@media screen and (max-width: 800px){
+
+    #hamburger {
+        display: flex;
+    } 
+
+    .test {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        background: var(--bg-blue-opac);
+        transition: transform 0.5s ease-out;
+    }
+
+    .slide {
+        transform: translate(100%);
+    }
+
+    .test a {
+        color: white;
+        justify-content: left;
+        padding-left: 5px;
+        width: 50%;
+        border-bottom: 1px solid rgb(7, 7, 7);
+    }
+
+    .test a:hover {
+        border-radius: 0;
+        animation: none;
+    }
+
+    .dropdown-menu{
+        background-color: #ffffff00;
+    }
+
+    .dropdown-item{
+        border: none;
+    }
+
+    .dropdown-item:hover{
+        background-color: #ffffff00;
+        color: var(--nav-red);
+    }
+}
+
+
+
+
+@media screen and (min-width: 880px) {
+
+    .FNav {
+        width: 100%;
+    }
+
+    .FDropdown {
+        margin-left: auto;
+    }
+
+    .FFlex {
+        margin-right: 7%;
+    }
+}

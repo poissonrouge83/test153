@@ -1,0 +1,46 @@
+
+mixin opinionBlock(opinion)
+    section 
+        h6 #{opinion.author}
+        p #{opinion.note}
+        p #{opinion.date}
+        p #{opinion.message}
+
+section
+    if opinions
+            h1= "Avis client"
+
+            div 
+                each opinion in opinions 
+                    if opinion.display
+                        if opinion.pinned
+                            +opinionBlock(opinion)
+                each opinion in opinions 
+                    if opinion.display            
+                        unless opinion.pinned 
+                            +opinionBlock(opinion)
+                            
+    form
+        div 
+            div
+                input(type="radio")
+                label(for="opinionNote1Input") 
+            div
+                input(type="radio")
+                label(for="opinionNote2Input") 
+            div
+                input(type="radio")
+                label(for="opinionNote3Input") 
+            div
+                input(type="radio")
+                label(for="opinionNote4Input") 
+            div
+                input(type="radio")
+                label(for="opinionNote5Input") 
+
+        div 
+            label(for="opinionMessageInput") 
+            input(type="text")
+
+        div 
+            button(type="submit" value="submit") Envoyer
